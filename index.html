@@ -18,6 +18,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#05040a;color:#fff}
 .btn-neon:hover{background-position:right center;box-shadow:0 0 28px rgba(217,70,239,.42)}
 .phone{background:#0d0b16;border:3px solid rgba(255,255,255,.13);border-radius:40px;box-shadow:0 25px 55px rgba(0,0,0,.8),0 0 35px rgba(168,85,247,.25)}
 .ruby-glow{box-shadow:0 0 45px rgba(217,70,239,.12)}
+.ruby-gem{display:inline-block;width:1em;height:1em;position:relative;transform:rotate(45deg) skew(-8deg,-8deg);border-radius:18% 28% 18% 28%;background:linear-gradient(135deg,#ffd1f2 0%,#ff79c8 28%,#ff2fa4 58%,#b91c7c 100%);box-shadow:0 0 14px rgba(255,64,176,.65),inset 2px 2px 5px rgba(255,255,255,.7),inset -3px -4px 7px rgba(112,0,78,.45);vertical-align:-.12em}
+.ruby-gem::before{content:"";position:absolute;left:18%;top:12%;width:64%;height:25%;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.08));clip-path:polygon(0 0,100% 0,82% 100%,18% 100%);opacity:.8}
+.ruby-gem::after{content:"";position:absolute;left:38%;top:28%;width:22%;height:48%;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.65}
+.ruby-gem-lg{font-size:3rem}
+
 
 .app-shot{border:1px solid rgba(255,255,255,.10);border-radius:28px;background:#090812;padding:8px;box-shadow:0 20px 55px rgba(0,0,0,.45),0 0 35px rgba(168,85,247,.12)}
 .app-shot img{width:100%;height:auto;display:block;border-radius:22px}
@@ -138,15 +143,16 @@ Choose a creation mode, provide your prompt or visual input, select the availabl
 
 <section id="ruby-shop" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/10 ruby-glow">
 <div class="text-center mb-14">
-<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">💎 Ruby Shop</span>
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest"><span class="ruby-gem" aria-hidden="true"></span> Ruby Shop</span>
 <h2 class="text-4xl md:text-5xl font-extrabold mt-2">Buy digital credits <span class="text-gradient">when you need them.</span></h2>
 <p class="text-gray-300 max-w-2xl mx-auto text-sm mt-4">Ruby/A-Coin packs are one-time digital purchases. They are separate from Zenzy Premium subscriptions.</p>
 </div>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">30 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹49</div><p class="text-gray-500 text-xs mt-2">Starter credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
-<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">80 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹99</div><p class="text-gray-500 text-xs mt-2">Credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
-<div class="glow-card p-7 rounded-3xl border-purple-500/30"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">200 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹210</div><p class="text-gray-500 text-xs mt-2">Popular credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
-<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">550 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹499</div><p class="text-gray-500 text-xs mt-2">Large credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl"><span class="ruby-gem ruby-gem-lg" aria-hidden="true"></span></div><h3 class="font-bold text-lg mt-5">30 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹49</div><p class="text-gray-500 text-xs mt-2">Starter credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl"><span class="ruby-gem ruby-gem-lg" aria-hidden="true"></span></div><h3 class="font-bold text-lg mt-5">80 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹99</div><p class="text-gray-500 text-xs mt-2">Credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl border-purple-500/30"><div class="text-3xl"><span class="ruby-gem ruby-gem-lg" aria-hidden="true"></span></div><h3 class="font-bold text-lg mt-5">200 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹210</div><p class="text-gray-500 text-xs mt-2">Popular credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl"><span class="ruby-gem ruby-gem-lg" aria-hidden="true"></span></div><h3 class="font-bold text-lg mt-5">550 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹499</div><p class="text-gray-500 text-xs mt-2">Large credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl border-pink-500/40"><div class="flex items-center justify-between"><div class="text-3xl"><span class="ruby-gem ruby-gem-lg" aria-hidden="true"></span></div><span class="text-[10px] font-black text-pink-200 bg-pink-500/20 border border-pink-400/30 px-3 py-1.5 rounded-full">BEST VALUE</span></div><h3 class="font-bold text-lg mt-5">1,200 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹999</div><p class="text-gray-500 text-xs mt-2">Ultimate credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
 </div>
 <p class="text-center text-xs text-gray-500 mt-8">Digital credits are delivered to the user's Zenzy account after successful payment verification.</p>
 </section>
