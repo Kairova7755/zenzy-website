@@ -1,26 +1,213 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Zenzy — AI video creation platform for text-to-video and image-to-video creation.">
-<meta name="theme-color" content="#07070d"><title>Zenzy — AI Video Creation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zenzy — AI video creation platform for text-to-video, image-to-video and creative video generation.">
+<meta name="theme-color" content="#05040a">
+<title>Zenzy — AI Video Creation Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#06060b;--card:rgba(20,20,32,.72);--line:rgba(255,255,255,.1);--text:#f8f8fc;--muted:#a6a6b7;--p:#8b5cf6;--b:#5ee7ff;--g:#70f0b0}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 75% 5%,#8b5cf628,transparent 28%),radial-gradient(circle at 5% 35%,#5ee7ff12,transparent 24%),var(--bg);color:var(--text);line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}.nav{position:fixed;inset:0 0 auto;z-index:9;background:#06060bb8;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850}.mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#fff,#b78cff,#5ee7ff);display:grid;place-items:center;color:#08080e;font-weight:950;box-shadow:0 0 30px #8b5cf655}.links{display:flex;gap:24px;color:#bdbdca;font-size:14px}.links a:hover{color:#fff}.navbtn,.btn{border:1px solid var(--line);border-radius:14px;padding:11px 18px;font-weight:800;font-size:14px;background:#ffffff08}.btn.primary{background:linear-gradient(135deg,#9b6cff,#685cf7);box-shadow:0 12px 35px #7c5cf646}.hero{min-height:850px;padding:155px 0 90px;display:grid;place-items:center}.heroGrid{display:grid;grid-template-columns:1.04fr .96fr;gap:65px;align-items:center}.eyebrow,.tag{display:inline-flex;padding:7px 12px;border-radius:999px;background:#8b5cf615;border:1px solid #c084fc35;color:#d8c7ff;font-size:12px;font-weight:800}.eyebrow:before{content:'●';font-size:8px;margin:3px 8px 0 0;color:#9d7bff}h1{font-size:clamp(55px,7vw,92px);line-height:.96;letter-spacing:-5px;margin-top:20px}.grad{background:linear-gradient(100deg,#fff,#cba9ff 45%,#63eaff);-webkit-background-clip:text;color:transparent}.lead{color:var(--muted);font-size:18px;max-width:650px;margin:27px 0 32px}.actions{display:flex;gap:12px;flex-wrap:wrap}.checks{display:flex;gap:20px;flex-wrap:wrap;color:#888898;font-size:12px;margin-top:24px}.checks span:before{content:'✓';color:var(--g);margin-right:6px}.creator{border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#1d1b2ae8,#0a0a11e8);box-shadow:0 25px 90px #0008;overflow:hidden}.top{height:50px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:#9999aa;font-size:12px;position:relative}.dots{position:absolute;left:17px;display:flex;gap:6px}.dots i{width:8px;height:8px;border-radius:50%;background:#555}.creatorBody{padding:20px}.preview{height:325px;border-radius:20px;background:radial-gradient(circle at 70% 25%,#5ee7ff35,transparent 22%),linear-gradient(135deg,#8b5cf650,transparent 48%),#11111b;display:grid;place-items:center;position:relative;overflow:hidden}.preview:after{content:'';position:absolute;width:70%;height:200%;background:#fff10;transform:rotate(25deg) translateX(-180%);animation:shine 5s infinite}.play{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:#fff16;border:1px solid #fff3;font-size:22px}.preview small{display:block;color:#aaa;margin-top:10px;text-align:center}.prompt{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:14px;color:#c7c7d4;font-size:13px;background:#fff006}.minirow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.mini{padding:10px;border:1px solid var(--line);border-radius:12px;color:#9999a9;font-size:10px;text-align:center}@keyframes shine{65%,100%{transform:rotate(25deg) translateX(180%)}}section{padding:105px 0}.kicker{color:#9d7bff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:900;margin-bottom:10px}h2{font-size:clamp(36px,5vw,58px);line-height:1.02;letter-spacing:-3px}.head{max-width:750px;margin-bottom:42px}.head p{color:var(--muted);margin-top:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);border-radius:25px;padding:28px;background:linear-gradient(145deg,#fff009,#ffffff03);transition:.25s}.card:hover{transform:translateY(-3px);border-color:#c084fc44}.icon{width:47px;height:47px;border-radius:15px;background:#8b5cf618;border:1px solid #8b5cf628;display:grid;place-items:center;font-size:21px;margin-bottom:20px}.card h3{font-size:19px;margin-bottom:8px}.card p{font-size:13px;color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{padding:24px;border-top:1px solid var(--line);border-radius:20px;background:#fff006}.num{color:#9d7bff;font-weight:900;font-size:12px;margin-bottom:18px}.step h3{font-size:17px;margin-bottom:7px}.step p{color:var(--muted);font-size:13px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{border:1px solid var(--line);border-radius:23px;padding:25px;background:#fff005}.ruby{font-size:29px}.product h3{margin-top:8px}.price{font-size:29px;font-weight:950;margin:7px 0}.product p{font-size:12px;color:var(--muted);min-height:38px}.tag{margin-top:15px;font-size:9px;padding:5px 8px}.plans{display:grid;grid-template-columns:1fr 1fr;gap:18px}.plan{padding:35px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#fff00b,#ffffff03);position:relative}.plan.feature{border-color:#8b5cf660;box-shadow:0 25px 80px #6d4dcc25}.badge{position:absolute;right:20px;top:20px;padding:6px 9px;border-radius:999px;background:#8b5cf618;color:#c8b6ff;font-size:9px;font-weight:900}.plan h3{font-size:24px}.planPrice{font-size:46px;font-weight:950;letter-spacing:-2px;margin:10px 0 2px}.planPrice small{font-size:13px;color:#999;font-weight:500;letter-spacing:0}.sub{color:#aaaaba;font-size:13px}.list{list-style:none;display:grid;gap:10px;margin:22px 0 27px}.list li{font-size:13px;color:#c9c9d4}.list li:before{content:'✓';color:var(--g);margin-right:8px}.note{font-size:10px;color:#777789;margin-top:12px}.info{display:grid;grid-template-columns:1fr 1fr;gap:16px}.faq{display:grid;grid-template-columns:1fr 1fr;gap:13px}.faq details,.policy details{border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:#fff004}.faq summary,.policy summary{cursor:pointer;font-weight:800;font-size:14px}.faq p,.policy p,.policy li{color:var(--muted);font-size:13px;margin-top:10px}.policy{display:grid;gap:13px}.policy ul{padding-left:18px}.contact{border:1px solid #8b5cf640;border-radius:30px;padding:45px;background:radial-gradient(circle at 85% 20%,#5ee7ff18,transparent 28%),radial-gradient(circle at 20% 100%,#8b5cf62a,transparent 35%),#ffffff05}.contact p{color:var(--muted);max-width:760px;margin:15px 0 25px}footer{border-top:1px solid var(--line);padding:45px 0 28px;color:#777789;font-size:12px}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.ft{color:#ddd;font-weight:800;margin-bottom:10px}.fl{display:grid;gap:7px}.fl a:hover{color:#fff}.copy{border-top:1px solid var(--line);margin-top:32px;padding-top:20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(16px);transition:.7s}.reveal.on{opacity:1;transform:none}@media(max-width:900px){.links{display:none}.heroGrid,.two,.plans,.info{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}}@media(max-width:560px){h1{letter-spacing:-3px}.hero{padding-top:120px}.grid3,.products,.flow,.foot{grid-template-columns:1fr}.preview{height:255px}.contact{padding:28px}}
-</style></head>
-<body>
-<nav class="nav"><div class="wrap navin"><a class="logo" href="#home"><span class="mark">Z</span>Zenzy</a><div class="links"><a href="#features">AI Video</a><a href="#ruby">Ruby Shop</a><a href="#premium">Premium</a><a href="#how">How It Works</a><a href="#policies">Policies</a></div><a class="navbtn" href="#premium">Explore Zenzy</a></div></nav>
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#05040a;color:#fff}
+.bg-grid{background-size:40px 40px;background-image:linear-gradient(to right,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.025) 1px,transparent 1px)}
+.text-gradient{background:linear-gradient(135deg,#f9a8d4 0%,#a855f7 48%,#67e8f9 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.glow-card{background:rgba(18,16,28,.72);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);box-shadow:0 0 35px rgba(168,85,247,.10);transition:.35s}
+.glow-card:hover{border-color:rgba(217,70,239,.45);box-shadow:0 0 50px rgba(217,70,239,.18);transform:translateY(-3px)}
+.btn-neon{background:linear-gradient(90deg,#d946ef,#8b5cf6,#06b6d4);background-size:200% auto;transition:.35s}
+.btn-neon:hover{background-position:right center;box-shadow:0 0 28px rgba(217,70,239,.42)}
+.phone{background:#0d0b16;border:3px solid rgba(255,255,255,.13);border-radius:40px;box-shadow:0 25px 55px rgba(0,0,0,.8),0 0 35px rgba(168,85,247,.25)}
+.ruby-glow{box-shadow:0 0 45px rgba(217,70,239,.12)}
+</style>
+</head>
+<body class="bg-grid min-h-screen">
+
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#05040a]/85 backdrop-blur-xl">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<a href="#home" class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-pink-500 to-cyan-400 flex items-center justify-center font-extrabold text-xl shadow-lg shadow-purple-500/20">Z</div>
+<span class="text-2xl font-extrabold tracking-tight">Zenzy <span class="text-pink-500">✦</span></span>
+</a>
+<nav class="hidden md:flex gap-7 text-sm font-semibold text-gray-300">
+<a href="#features" class="hover:text-pink-400">AI Video</a>
+<a href="#ruby-shop" class="hover:text-pink-400">Ruby Shop</a>
+<a href="#premium" class="hover:text-pink-400">Premium</a>
+<a href="#how" class="hover:text-pink-400">How It Works</a>
+<a href="#faq" class="hover:text-pink-400">FAQ</a>
+<a href="#support" class="hover:text-pink-400">Support</a>
+</nav>
+<a href="#ruby-shop" class="btn-neon px-5 py-2.5 rounded-full font-bold text-xs">Explore Zenzy</a>
+</div>
+</header>
+
 <main>
-<section id="home" class="hero"><div class="wrap heroGrid"><div class="reveal"><span class="eyebrow">AI VIDEO CREATION PLATFORM</span><h1>Turn ideas into <span class="grad">cinematic videos.</span></h1><p class="lead">Zenzy is an AI video creation platform for turning text prompts, images and creative references into visual video experiences.</p><div class="actions"><a class="btn primary" href="#features">Explore AI Creation →</a><a class="btn" href="#ruby">View Ruby Shop</a></div><div class="checks"><span>Digital AI video service</span><span>Ruby credits</span><span>Monthly & yearly Premium</span></div></div><div class="creator reveal"><div class="top"><div class="dots"><i></i><i></i><i></i></div>Zenzy / AI Creator</div><div class="creatorBody"><div class="preview"><div><div class="play">▶</div><small>AI video preview</small></div></div><div class="prompt">“A futuristic city at night, cinematic lighting, atmospheric camera movement...”</div><div class="minirow"><div class="mini">TEXT → VIDEO</div><div class="mini">IMAGE → VIDEO</div><div class="mini">9:16 • HD</div></div></div></div></div></section>
-<section id="features"><div class="wrap"><div class="head reveal"><div class="kicker">AI Creation</div><h2>One creative workspace. Multiple ways to create.</h2><p>Zenzy brings prompt-based and image-based workflows together for expressive visual storytelling.</p></div><div class="grid3"><div class="card reveal"><div class="icon">✦</div><h3>Text to Video</h3><p>Describe a scene, concept or story with a prompt and create an AI video workflow.</p></div><div class="card reveal"><div class="icon">◈</div><h3>Image to Video</h3><p>Start from an image and transform the visual concept into an animated sequence.</p></div><div class="card reveal"><div class="icon">⌁</div><h3>Reference Images</h3><p>Use visual references to guide the creative direction of your generated video.</p></div><div class="card reveal"><div class="icon">◉</div><h3>Creative Styles</h3><p>Build different visual moods and storytelling directions for your creation.</p></div><div class="card reveal"><div class="icon">▣</div><h3>Aspect Ratios</h3><p>Create content for different viewing formats, including portrait short-form workflows.</p></div><div class="card reveal"><div class="icon">⚡</div><h3>Simple Workflow</h3><p>Choose a mode, provide inputs, generate the video and access the result in Zenzy.</p></div></div></div></section>
-<section><div class="wrap"><div class="two"><div class="card reveal"><div class="kicker">01 / Text to Video</div><h2 style="font-size:34px">From words to moving scenes.</h2><p style="margin-top:14px">Write the visual idea you want to create. Zenzy's AI video workflow turns the prompt into a generated video experience.</p></div><div class="card reveal"><div class="kicker">02 / Image to Video</div><h2 style="font-size:34px">Give your image a new dimension.</h2><p style="margin-top:14px">Use an image as the starting point and create an animated video sequence around your visual concept.</p></div></div></div></section>
-<section id="how"><div class="wrap"><div class="head reveal"><div class="kicker">Workflow</div><h2>How Zenzy works.</h2><p>A straightforward digital workflow from idea to generated video.</p></div><div class="flow"><div class="step reveal"><div class="num">01</div><h3>Create an account</h3><p>Sign in to Zenzy and access the video creation workspace.</p></div><div class="step reveal"><div class="num">02</div><h3>Choose a mode</h3><p>Select Text-to-Video or Image-to-Video and provide your creative input.</p></div><div class="step reveal"><div class="num">03</div><h3>Use your credits</h3><p>Use available Ruby/A-Coin credits or an eligible Premium benefit.</p></div><div class="step reveal"><div class="num">04</div><h3>Generate & view</h3><p>Submit the request and access your generated video through Zenzy.</p></div></div></div></section>
-<section id="ruby"><div class="wrap"><div class="head reveal"><div class="kicker">Ruby Shop</div><h2>Buy credits when you need them.</h2><p>Ruby credits are digital usage credits for eligible Zenzy AI video creation services. These are <strong>one-time purchases</strong>, separate from Premium subscriptions.</p></div><div class="products"><div class="product reveal"><div class="ruby">💎</div><h3>30 Ruby</h3><div class="price">₹49</div><p>Starter digital credit pack.</p><span class="tag">ONE-TIME PURCHASE</span></div><div class="product reveal"><div class="ruby">💎</div><h3>80 Ruby</h3><div class="price">₹99</div><p>More credits for AI creation.</p><span class="tag">ONE-TIME PURCHASE</span></div><div class="product reveal"><div class="ruby">💎</div><h3>200 Ruby</h3><div class="price">₹210</div><p>Extended AI video creation credits.</p><span class="tag">ONE-TIME PURCHASE</span></div><div class="product reveal"><div class="ruby">💎</div><h3>550 Ruby</h3><div class="price">₹499</div><p>Large credit pack for regular creators.</p><span class="tag">ONE-TIME PURCHASE</span></div></div></div></section>
-<section id="premium"><div class="wrap"><div class="head reveal"><div class="kicker">Premium Membership</div><h2>Premium is separate from the Ruby Shop.</h2><p>Premium plans are recurring subscriptions. Monthly and Yearly are separate plan options in Zenzy.</p></div><div class="plans"><div class="plan reveal"><h3>Monthly Premium</h3><div class="planPrice">₹499 <small>/ month</small></div><div class="sub">Recurring monthly subscription</div><ul class="list"><li>Premium access inside Zenzy</li><li>650 Ruby / A-Coin benefit</li><li>AI video creation features available under the plan</li><li>Monthly billing through the selected payment method</li></ul><a class="btn" href="#policies">View subscription terms</a><div class="note">Renews according to the active billing cycle until cancelled.</div></div><div class="plan feature reveal"><span class="badge">YEARLY</span><h3>Yearly Premium</h3><div class="planPrice">₹2,100 <small>/ year</small></div><div class="sub">Recurring yearly subscription</div><ul class="list"><li>Premium access inside Zenzy</li><li>2,800 Ruby / A-Coin benefit</li><li>AI video creation features available under the plan</li><li>Yearly billing through the selected payment method</li></ul><a class="btn primary" href="#policies">View subscription terms</a><div class="note">Renews according to the active billing cycle until cancelled.</div></div></div></div></section>
-<section><div class="wrap"><div class="info"><div class="card reveal"><div class="kicker">Payment Use Case</div><h3>What Zenzy payments are for</h3><p>Zenzy uses online payments to provide digital AI video creation services. Customers can purchase Ruby/A-Coin credit packs or subscribe to a Premium plan for the benefits described on this website and in the application.</p></div><div class="card reveal"><div class="kicker">Digital Service</div><h3>No physical shipping</h3><p>Zenzy's products are digital services and digital credits delivered electronically through the application. Physical goods are not shipped.</p></div></div></div></section>
-<section><div class="wrap"><div class="head reveal"><div class="kicker">FAQ</div><h2>Questions, answered.</h2></div><div class="faq"><details class="reveal"><summary>What are Ruby credits?</summary><p>Ruby credits are digital usage credits used within Zenzy for eligible AI video creation services.</p></details><details class="reveal"><summary>Are Ruby Shop purchases subscriptions?</summary><p>No. Ruby Shop packs are one-time digital credit purchases, separate from Monthly and Yearly Premium subscriptions.</p></details><details class="reveal"><summary>What is Premium?</summary><p>Premium is a recurring subscription that provides the benefits displayed for the selected Monthly or Yearly plan.</p></details><details class="reveal"><summary>Where can I get support?</summary><p>Support is available through the Help & Support option inside the Zenzy application. Keep transaction details available for payment-related requests.</p></details></div></div></section>
-<section id="policies"><div class="wrap"><div class="head reveal"><div class="kicker">Customer Information</div><h2>Policies & terms.</h2><p>Clear information about digital purchases, subscriptions, cancellations, refunds and customer data.</p></div><div class="policy"><details class="reveal" open><summary>Refund & Cancellation Policy</summary><p><strong>Ruby Shop:</strong> Ruby/A-Coin packs are digital products delivered to the user's Zenzy account after successful payment. Because digital credits may be delivered immediately, refund requests are reviewed on a case-by-case basis.</p><p><strong>Premium:</strong> Users may cancel an active subscription using the cancellation controls available in Zenzy. Cancellation stops the applicable future renewal; access already provided for the current billing cycle may remain available according to the subscription terms shown at purchase.</p><p>If a successful payment does not correctly provision the purchased digital product or subscription, contact Zenzy Support with payment details so the issue can be investigated and, where appropriate, corrected or refunded.</p><p>Approved refunds are processed to the original payment method where supported. Processing time may depend on the payment provider and banking network.</p></details><details class="reveal"><summary>Terms & Conditions</summary><p>Zenzy provides digital AI video creation services through its application. Users agree to use the service lawfully and not misuse the platform, payment system, generated content or other users' information.</p><p>Prices, features, credit benefits and subscription terms are displayed before purchase and may change for future purchases. The applicable price and benefits presented at purchase govern that transaction.</p><p>Users are responsible for prompts, images and other materials they submit and must have the necessary rights and permissions to use them.</p></details><details class="reveal"><summary>Privacy Policy</summary><p>Zenzy may process account information, contact details, uploaded media, prompts, generated content, usage information and transaction-related information as needed to operate the service, provide support, prevent abuse, maintain security and process payments.</p><p>Payment credentials are handled by the payment provider used by Zenzy; Zenzy does not intentionally store customers' full card credentials on its own servers.</p><p>Users may contact Zenzy Support through the Help & Support option in the application regarding account or privacy questions.</p></details><details class="reveal"><summary>Digital Product Delivery</summary><p>Ruby/A-Coin credits and Premium benefits are digital and are intended to be delivered to the user's Zenzy account after successful payment verification. There is no physical shipping or physical product delivery.</p></details></div></div></section>
-<section id="contact"><div class="wrap"><div class="contact reveal"><div class="kicker">Support</div><h2>Need help with Zenzy?</h2><p>For account, AI video creation, Ruby/A-Coin or subscription issues, use the <strong>Help & Support</strong> option inside the Zenzy application. For payment requests, include the payment date, amount and transaction/reference details.</p><a class="btn primary" href="#policies">Read Refund & Cancellation Policy →</a></div></div></section>
+<section id="home" class="max-w-7xl mx-auto px-6 py-20 lg:py-28 text-center relative overflow-hidden">
+<div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-purple-700/15 blur-3xl rounded-full pointer-events-none"></div>
+<div class="relative">
+<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple-950/60 border border-purple-500/30 mb-8">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<span class="text-xs font-bold text-purple-100">AI VIDEO CREATION PLATFORM</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-extrabold leading-[.98] tracking-tight max-w-6xl mx-auto">
+Turn ideas into <span class="text-gradient">cinematic AI videos.</span>
+</h1>
+<p class="text-gray-300 max-w-2xl mx-auto text-base md:text-xl mt-7 mb-10 leading-relaxed">
+Create visual stories from prompts, images and creative references through Zenzy's digital AI video creation experience.
+</p>
+<div class="flex flex-wrap justify-center gap-3 mb-14">
+<a href="#features" class="btn-neon px-7 py-3.5 rounded-2xl font-extrabold text-sm">Explore AI Creation →</a>
+<a href="#pricing" class="px-7 py-3.5 rounded-2xl font-extrabold text-sm border border-white/10 bg-white/5 hover:bg-white/10">View Pricing</a>
+</div>
+
+<div class="max-w-5xl mx-auto glow-card rounded-[32px] p-5 md:p-8 text-left grid lg:grid-cols-2 gap-8 items-center">
+<div>
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">Zenzy Creator</span>
+<h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-4">A simple workspace for AI video creation.</h2>
+<p class="text-gray-300 text-sm leading-relaxed mb-7">
+Choose a creation mode, provide your prompt or visual input, select the available video options, and submit your generation request.
+</p>
+<div class="grid grid-cols-2 gap-3 text-xs">
+<div class="bg-white/5 border border-white/5 rounded-2xl p-4"><b>Text → Video</b><br><span class="text-gray-500">Prompt-based creation</span></div>
+<div class="bg-white/5 border border-white/5 rounded-2xl p-4"><b>Image → Video</b><br><span class="text-gray-500">Animate visual inputs</span></div>
+<div class="bg-white/5 border border-white/5 rounded-2xl p-4"><b>Reference Images</b><br><span class="text-gray-500">Guide the visual direction</span></div>
+<div class="bg-white/5 border border-white/5 rounded-2xl p-4"><b>Digital Credits</b><br><span class="text-gray-500">Ruby / A-Coin usage</span></div>
+</div>
+</div>
+<div class="phone p-5">
+<div class="flex justify-between items-center mb-5 pb-3 border-b border-white/10">
+<div class="font-extrabold text-lg">Zenzy ✦</div>
+<div class="bg-purple-900/60 border border-purple-500/40 text-purple-200 text-xs px-3 py-1 rounded-full">Ruby Credits</div>
+</div>
+<div class="bg-purple-950/50 border border-purple-500/30 p-4 rounded-2xl mb-4">
+<div class="text-xs font-bold text-purple-100">AI Video Creator</div>
+<div class="text-[10px] text-gray-400 mt-1">Choose your creation workflow</div>
+</div>
+<div class="grid grid-cols-2 gap-3 mb-4">
+<div class="border border-purple-500/40 bg-purple-900/20 p-5 rounded-2xl text-center"><div class="text-2xl">✦</div><div class="text-xs font-bold mt-2">Text to Video</div></div>
+<div class="border border-cyan-500/30 bg-cyan-900/10 p-5 rounded-2xl text-center"><div class="text-2xl">◈</div><div class="text-xs font-bold mt-2">Image to Video</div></div>
+</div>
+<div class="border border-dashed border-purple-500/40 p-5 rounded-2xl text-center mb-4">
+<div class="text-3xl mb-1">🖼️</div>
+<div class="text-xs font-bold">Add visual reference</div>
+<div class="text-[10px] text-gray-500 mt-1">Supported formats depend on the app</div>
+</div>
+<div class="btn-neon p-3 rounded-xl text-center font-bold text-xs uppercase">Create Video</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features" class="max-w-7xl mx-auto px-6 py-20 border-t border-white/10">
+<div class="text-center mb-14">
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">AI Creation</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mt-2">Built around your <span class="text-gradient">creative workflow.</span></h2>
+<p class="text-gray-300 text-sm max-w-2xl mx-auto mt-4">Zenzy combines prompt-based creation, image animation and digital credit usage inside one mobile-focused experience.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">✦</div><h3 class="text-xl font-bold mb-3">Text to Video</h3><p class="text-gray-300 text-sm leading-relaxed">Describe a scene, concept or visual story and submit it through the AI video creation workflow.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">◈</div><h3 class="text-xl font-bold mb-3">Image to Video</h3><p class="text-gray-300 text-sm leading-relaxed">Use an image as a starting point for an animated video sequence.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">⌁</div><h3 class="text-xl font-bold mb-3">Reference Images</h3><p class="text-gray-300 text-sm leading-relaxed">Provide visual references to help define the intended creative direction.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">◉</div><h3 class="text-xl font-bold mb-3">Creative Options</h3><p class="text-gray-300 text-sm leading-relaxed">Use the video options available inside Zenzy for duration, quality, aspect ratio and style.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">💎</div><h3 class="text-xl font-bold mb-3">Ruby / A-Coin Credits</h3><p class="text-gray-300 text-sm leading-relaxed">Purchase digital credits separately and use eligible credits for AI video creation services.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-3xl mb-5">⚡</div><h3 class="text-xl font-bold mb-3">Premium Access</h3><p class="text-gray-300 text-sm leading-relaxed">Monthly and Yearly Premium subscriptions provide the benefits displayed for the selected plan.</p></div>
+</div>
+</section>
+
+<section id="how" class="max-w-7xl mx-auto px-6 py-20 border-t border-white/10">
+<div class="text-center mb-14">
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">Workflow</span>
+<h2 class="text-4xl font-extrabold mt-2">How <span class="text-gradient">Zenzy works.</span></h2>
+</div>
+<div class="grid md:grid-cols-4 gap-5">
+<div class="glow-card p-7 rounded-3xl"><div class="text-purple-400 font-black mb-5">01</div><h3 class="font-bold mb-2">Create account</h3><p class="text-gray-400 text-xs leading-relaxed">Sign in and open the Zenzy creation workspace.</p></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-pink-400 font-black mb-5">02</div><h3 class="font-bold mb-2">Choose a mode</h3><p class="text-gray-400 text-xs leading-relaxed">Select Text-to-Video or Image-to-Video and add your input.</p></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-cyan-400 font-black mb-5">03</div><h3 class="font-bold mb-2">Use credits</h3><p class="text-gray-400 text-xs leading-relaxed">Use eligible Ruby/A-Coin credits or the benefits of your Premium plan.</p></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-emerald-400 font-black mb-5">04</div><h3 class="font-bold mb-2">Generate & view</h3><p class="text-gray-400 text-xs leading-relaxed">Submit the request and access the generated result through Zenzy.</p></div>
+</div>
+</section>
+
+<section id="ruby-shop" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/10 ruby-glow">
+<div class="text-center mb-14">
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">💎 Ruby Shop</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mt-2">Buy digital credits <span class="text-gradient">when you need them.</span></h2>
+<p class="text-gray-300 max-w-2xl mx-auto text-sm mt-4">Ruby/A-Coin packs are one-time digital purchases. They are separate from Zenzy Premium subscriptions.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">30 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹49</div><p class="text-gray-500 text-xs mt-2">Starter credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">80 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹99</div><p class="text-gray-500 text-xs mt-2">Credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl border-purple-500/30"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">200 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹210</div><p class="text-gray-500 text-xs mt-2">Popular credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+<div class="glow-card p-7 rounded-3xl"><div class="text-3xl">💎</div><h3 class="font-bold text-lg mt-5">550 Ruby</h3><div class="text-3xl font-extrabold mt-2">₹499</div><p class="text-gray-500 text-xs mt-2">Large credit pack</p><span class="inline-block mt-5 text-[10px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1.5 rounded-full">ONE-TIME</span></div>
+</div>
+<p class="text-center text-xs text-gray-500 mt-8">Digital credits are delivered to the user's Zenzy account after successful payment verification.</p>
+</section>
+
+<section id="premium" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/10">
+<div class="text-center mb-14">
+<span class="text-xs font-bold text-pink-400 uppercase tracking-widest">👑 Premium</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mt-2">Subscriptions are <span class="text-gradient">separate.</span></h2>
+<p class="text-gray-300 max-w-2xl mx-auto text-sm mt-4">Premium is a recurring subscription. Monthly and Yearly plans are separate subscription options from the Ruby Shop.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-7 max-w-5xl mx-auto">
+<div class="glow-card p-9 rounded-[30px]">
+<div class="text-xs text-purple-300 font-bold uppercase tracking-widest">Monthly</div>
+<h3 class="text-2xl font-extrabold mt-2">Monthly Premium</h3>
+<div class="text-5xl font-black mt-5">₹499 <span class="text-sm text-gray-500 font-normal">/ month</span></div>
+<p class="text-sm text-gray-400 mt-2">₹1 initial payment → 3-day trial → ₹499 recurring monthly renewal.</p>
+<ul class="mt-7 space-y-3 text-sm text-gray-200">
+<li>✓ Premium access inside Zenzy</li><li>✓ 650 Ruby / A-Coin benefit</li><li>✓ Access to Premium features available in the app</li>
+</ul>
+<div class="mt-7 text-xs text-gray-500">Cancel according to the subscription controls available in Zenzy before the next renewal.</div>
+</div>
+<div class="glow-card p-9 rounded-[30px] border-pink-500/30">
+<div class="text-xs text-pink-300 font-bold uppercase tracking-widest">Yearly</div>
+<h3 class="text-2xl font-extrabold mt-2">Yearly Premium</h3>
+<div class="text-5xl font-black mt-5">₹2,100 <span class="text-sm text-gray-500 font-normal">/ year</span></div>
+<p class="text-sm text-gray-400 mt-2">₹1 initial payment → 1-month trial → ₹2,100 recurring yearly renewal.</p>
+<ul class="mt-7 space-y-3 text-sm text-gray-200">
+<li>✓ Premium access inside Zenzy</li><li>✓ 2,800 Ruby / A-Coin benefit</li><li>✓ Access to Premium features available in the app</li>
+</ul>
+<div class="mt-7 text-xs text-gray-500">Cancel according to the subscription controls available in Zenzy before the next renewal.</div>
+</div>
+</div>
+</section>
+
+<section id="payment-use" class="max-w-7xl mx-auto px-6 py-20 border-t border-white/10">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="glow-card p-8 rounded-3xl"><div class="text-xs text-pink-400 font-bold uppercase tracking-widest">Payment Use Case</div><h3 class="text-2xl font-extrabold mt-3 mb-4">What customers pay for</h3><p class="text-gray-300 text-sm leading-relaxed">Zenzy collects payments for its digital AI video creation services. Customers can purchase one-time Ruby/A-Coin credit packs or recurring Premium subscriptions. Payments are used to provision the purchased digital credits or subscription benefits inside the Zenzy application.</p></div>
+<div class="glow-card p-8 rounded-3xl"><div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">Digital Delivery</div><h3 class="text-2xl font-extrabold mt-3 mb-4">No physical shipping</h3><p class="text-gray-300 text-sm leading-relaxed">Zenzy sells digital services and digital credits. Ruby/A-Coin credits and Premium benefits are delivered electronically to the user's Zenzy account after successful payment verification.</p></div>
+</div>
+</section>
+
+<section id="faq" class="max-w-5xl mx-auto px-6 py-20 border-t border-white/10">
+<div class="text-center mb-12"><span class="text-xs font-bold text-purple-400 uppercase tracking-widest">FAQ</span><h2 class="text-4xl font-extrabold mt-2">Frequently asked <span class="text-gradient">questions.</span></h2></div>
+<div class="space-y-4">
+<details class="glow-card rounded-2xl p-6"><summary class="font-bold cursor-pointer">Are Ruby Shop purchases subscriptions?</summary><p class="text-gray-400 text-sm mt-3">No. Ruby/A-Coin packs are one-time digital credit purchases. They are separate from Monthly and Yearly Premium subscriptions.</p></details>
+<details class="glow-card rounded-2xl p-6"><summary class="font-bold cursor-pointer">What is Premium?</summary><p class="text-gray-400 text-sm mt-3">Premium is a recurring subscription that provides the benefits shown for the selected Monthly or Yearly plan.</p></details>
+<details class="glow-card rounded-2xl p-6"><summary class="font-bold cursor-pointer">What happens after a successful payment?</summary><p class="text-gray-400 text-sm mt-3">After payment verification, eligible Ruby/A-Coin credits or Premium subscription benefits are provisioned to the user's Zenzy account.</p></details>
+<details class="glow-card rounded-2xl p-6"><summary class="font-bold cursor-pointer">How can I request support for a payment?</summary><p class="text-gray-400 text-sm mt-3">Email <a class="text-pink-400 hover:underline" href="mailto:aikairova1@gmail.com">aikairova1@gmail.com</a> with the transaction/reference details, amount and date of payment.</p></details>
+</div>
+</section>
+
+<section id="support" class="max-w-5xl mx-auto px-6 py-20 border-t border-white/10">
+<div class="glow-card rounded-[30px] p-9 md:p-12 text-center">
+<span class="text-xs text-pink-400 font-bold uppercase tracking-widest">Support</span>
+<h2 class="text-4xl font-extrabold mt-2">Need help with Zenzy?</h2>
+<p class="text-gray-300 text-sm max-w-2xl mx-auto mt-4">For account, AI video creation, Ruby/A-Coin or subscription issues, contact Zenzy Support. Please include the payment date, amount and transaction/reference ID for payment-related requests.</p>
+<a href="mailto:aikairova1@gmail.com?subject=Zenzy%20Support%20Request" class="btn-neon inline-block px-7 py-3.5 rounded-2xl font-extrabold text-sm mt-7">Email Zenzy Support</a>
+<p class="text-xs text-gray-500 mt-4">Support email: aikairova1@gmail.com</p>
+</div>
+</section>
 </main>
-<footer><div class="wrap"><div class="foot"><div><div class="logo"><span class="mark">Z</span>Zenzy</div><p style="margin-top:12px;max-width:360px">AI video creation for ideas, images and visual stories. Digital services delivered through the Zenzy application.</p></div><div><div class="ft">Explore</div><div class="fl"><a href="#features">AI Video Creation</a><a href="#ruby">Ruby Shop</a><a href="#premium">Premium</a><a href="#how">How It Works</a></div></div><div><div class="ft">Customer Information</div><div class="fl"><a href="#policies">Refund & Cancellation</a><a href="#policies">Terms & Conditions</a><a href="#policies">Privacy Policy</a><a href="#contact">Support</a></div></div></div><div class="copy"><span>© 2026 Zenzy. All rights reserved.</span><span>Digital AI video creation platform</span></div></div></footer>
-<script>const o=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));</script>
-</body></html>
+
+<footer class="border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6 py-12">
+<div class="grid md:grid-cols-3 gap-10">
+<div><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 via-pink-500 to-cyan-400 flex items-center justify-center font-extrabold">Z</div><span class="font-extrabold text-xl">Zenzy</span></div><p class="text-gray-500 text-xs leading-relaxed mt-4 max-w-sm">AI video creation platform providing digital AI video services, digital Ruby/A-Coin credits and Premium subscriptions.</p></div>
+<div><h3 class="font-bold text-sm mb-4">Explore</h3><div class="grid gap-2 text-xs text-gray-500"><a href="#features" class="hover:text-white">AI Video Creation</a><a href="#ruby-shop" class="hover:text-white">Ruby Shop</a><a href="#premium" class="hover:text-white">Premium</a><a href="#payment-use" class="hover:text-white">Payment Use Case</a></div></div>
+<div><h3 class="font-bold text-sm mb-4">Customer Information</h3><div class="grid gap-2 text-xs text-gray-500"><a href="privacy.html" class="hover:text-white">Privacy Policy</a><a href="terms.html" class="hover:text-white">Terms & Conditions</a><a href="refund.html" class="hover:text-white">Refund & Cancellation</a><a href="mailto:aikairova1@gmail.com" class="hover:text-white">Support</a></div></div>
+</div>
+<div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-gray-600"><span>© 2026 Zenzy AI Video Studio. All rights reserved.</span><span>Digital AI video creation platform</span></div>
+</div>
+</footer>
+</body>
+</html>
