@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zenzy — AI Video Creation</title>
+    <meta name="description" content="Zenzy is an AI video creation application for creating videos from prompts and reference images.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070812;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(7, 8, 18, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #20233a;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #8b7cff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #c9cbe0;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 22px 80px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #39345f;
+            border-radius: 999px;
+            color: #aaa0ff;
+            background: #111026;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #9385ff;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: auto;
+            color: #b9bbcc;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 14px 25px;
+            border-radius: 12px;
+            background: #7868ff;
+            font-weight: 700;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 22px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #aeb0c2;
+            max-width: 650px;
+            margin: 0 auto 38px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: #101222;
+            border: 1px solid #242741;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            color: #aeb0c2;
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 29px;
+            font-weight: 800;
+            margin: 15px 0;
+        }
+
+        .price small {
+            font-size: 13px;
+            color: #9699ad;
+        }
+
+        .price-card {
+            position: relative;
+        }
+
+        .popular {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 11px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: #7868ff;
+        }
+
+        .features {
+            list-style: none;
+            margin-top: 16px;
+            color: #c9cbe0;
+            font-size: 14px;
+        }
+
+        .features li {
+            margin: 8px 0;
+        }
+
+        .notice {
+            background: #0d1020;
+            border: 1px solid #282c48;
+            border-radius: 16px;
+            padding: 25px;
+            color: #bfc1d1;
+        }
+
+        footer {
+            border-top: 1px solid #20233a;
+            margin-top: 30px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 22px;
+            color: #9295aa;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        @media (max-width: 750px) {
+            .nav-links {
+                display: none;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <div class="logo">Zen<span>zy</span></div>
+
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#support">Support</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <div class="hero">
+        <div class="badge">AI Video Creation Platform</div>
+
+        <h1>Create Videos with <span>Zenzy AI</span></h1>
+
+        <p>
+            Zenzy is an AI video creation application that helps users
+            create AI-generated videos using text prompts and reference images.
+        </p>
+
+        <a class="button" href="#pricing">Explore Plans</a>
+    </div>
+
+    <section id="features">
+        <h2 class="section-title">AI Video Creation</h2>
+
+        <p class="section-description">
+            Create videos inside the Zenzy application using different
+            generation modes, styles, durations, quality settings and
+            reference images.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>🎬 Text to Video</h3>
+                <p>
+                    Describe your video idea using a text prompt and
+                    create an AI-generated video.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🖼️ Image to Video</h3>
+                <p>
+                    Use reference images with your prompt to create
+                    AI-generated video content.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>✨ Creative Controls</h3>
+                <p>
+                    Select video style, duration, aspect ratio and
+                    quality according to your creation requirements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="pricing">
+
+        <h2 class="section-title">Zenzy Pricing</h2>
+
+        <p class="section-description">
+            A-Coins are used within Zenzy for AI video creation services.
+            Premium subscriptions provide additional benefits inside the app.
+        </p>
+
+        <div class="grid">
+
+            <div class="card price-card">
+                <h3>30 A-Coins</h3>
+                <div class="price">₹49</div>
+                <p>Starter A-Coin pack.</p>
+
+                <ul class="features">
+                    <li>✓ 30 A-Coins</li>
+                    <li>✓ For AI video creation</li>
+                    <li>✓ Digital in-app product</li>
+                </ul>
+            </div>
+
+            <div class="card price-card">
+                <h3>80 A-Coins</h3>
+                <div class="price">₹99</div>
+                <p>Standard A-Coin pack.</p>
+
+                <ul class="features">
+                    <li>✓ 80 A-Coins</li>
+                    <li>✓ For AI video creation</li>
+                    <li>✓ Digital in-app product</li>
+                </ul>
+            </div>
+
+            <div class="card price-card">
+                <span class="popular">POPULAR</span>
+
+                <h3>200 A-Coins</h3>
+                <div class="price">₹210</div>
+                <p>Popular A-Coin pack.</p>
+
+                <ul class="features">
+                    <li>✓ 200 A-Coins</li>
+                    <li>✓ For AI video creation</li>
+                    <li>✓ Digital in-app product</li>
+                </ul>
+            </div>
+
+            <div class="card price-card">
+                <h3>550 A-Coins</h3>
+                <div class="price">₹499</div>
+                <p>Large A-Coin pack.</p>
+
+                <ul class="features">
+                    <li>✓ 550 A-Coins</li>
+                    <li>✓ For AI video creation</li>
+                    <li>✓ Digital in-app product</li>
+                </ul>
+            </div>
+
+            <div class="card price-card">
+                <h3>Monthly Premium</h3>
+                <div class="price">₹499 <small>/ month</small></div>
+                <p>Monthly Zenzy Premium subscription.</p>
+
+                <ul class="features">
+                    <li>✓ Premium access</li>
+                    <li>✓ 650 A-Coins</li>
+                    <li>✓ Monthly billing</li>
+                </ul>
+            </div>
+
+            <div class="card price-card">
+                <h3>Yearly Premium</h3>
+                <div class="price">₹2100 <small>/ year</small></div>
+                <p>Yearly Zenzy Premium subscription.</p>
+
+                <ul class="features">
+                    <li>✓ Premium access</li>
+                    <li>✓ 2,800 A-Coins</li>
+                    <li>✓ Yearly billing</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Zenzy</h2>
+
+        <p class="section-description">
+            Zenzy is an AI video creation application designed to make
+            AI-powered video creation accessible through a simple mobile
+            experience.
+        </p>
+
+        <div class="notice">
+            Users can create AI video requests through the Zenzy application.
+            Depending on the selected generation settings, A-Coins may be
+            required for video creation.
+        </div>
+    </section>
+
+    <section id="support">
+        <h2 class="section-title">Contact & Support</h2>
+
+        <p class="section-description">
+            For account, payment, subscription or service-related questions,
+            users can contact Zenzy support.
+        </p>
+
+        <div class="notice">
+            <strong>Support</strong><br><br>
+            Please contact Zenzy support through the support option
+            available inside the Zenzy application.
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">How Zenzy Works</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>1. Choose</h3>
+                <p>
+                    Select Text to Video or Image to Video and configure
+                    your desired video settings.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2. Create</h3>
+                <p>
+                    Submit your video request through the Zenzy application.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>3. Generate</h3>
+                <p>
+                    Your request is processed using the selected AI video
+                    generation options.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Refund & Cancellation</a>
+            <a href="#support">Contact</a>
+        </div>
+
+        <p>© 2026 Zenzy. All rights reserved.</p>
+
+    </div>
+</footer>
+
+</body>
+</html>
